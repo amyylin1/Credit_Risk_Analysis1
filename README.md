@@ -112,4 +112,4 @@ This exercise compares and contrasts six supervised machine-learning models:
         
 ## Summary
 
-Out of the six models, Ensemble adaboost classidier has the highest accuracy score and recall values.  All models have similar precision scores (low performers for high-risk loans).  
+All models have similar precision scores (low performers for high-risk loans).  Out of the six models, Ensemble adaboost classidier has the highest accuracy score and recall values, which is the best model for loan approval.  
