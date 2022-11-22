@@ -2,18 +2,45 @@
 
 ## Overview
 
-This exercise applies and compares six supervised machine learning models:
+This exercise compares and contrasts six supervised machine learning models:
 
 1. Naive random oversampling (RandomOverSampler library)
 2. SMOTE oversampling (SMOTE library) 
-3. Undersampling (ClusterCentroids library)
-4. Cobmination (over and under) sampling (SMOTEENN algorithm)
-5. Random foresSt classifier
-6. Easy ensemble adaboost classifier
-
+3. Undersampling (ClusterCentroids algorithm)
+4. Cobmination sampling (SMOTEENN algorithm)
+5. Balanced random forest classifier (biased reduction)
+6. Ensemble adaboost classifier (biased reduction)
 
 
 ## Results
+
+1. Naive random oversampling
+
+<img width="703" alt="Screen Shot 2022-11-22 at 12 38 51 PM" src="https://user-images.githubusercontent.com/108419097/203383519-3a0b9e55-a499-4440-ade5-9a3df6957740.png">
+
+2. SMOTE oversampling
+
+<img width="681" alt="Screen Shot 2022-11-22 at 12 39 36 PM" src="https://user-images.githubusercontent.com/108419097/203383667-15aa1c73-9cd3-4fb8-9af5-30a5913d2448.png">
+
+3. ClusterCentroids algorithm
+
+<img width="681" alt="Screen Shot 2022-11-22 at 12 43 53 PM" src="https://user-images.githubusercontent.com/108419097/203384540-1b82f351-9265-47b0-9c5f-d6fde74ef6af.png">
+
+
+4. SMOTEENN algorithm
+
+<img width="686" alt="Screen Shot 2022-11-22 at 12 44 49 PM" src="https://user-images.githubusercontent.com/108419097/203384707-42f6ee21-2482-42b0-ab57-59c3519f5b60.png">
+
+5. Balanced random forest classifier
+
+<img width="695" alt="Screen Shot 2022-11-22 at 12 45 24 PM" src="https://user-images.githubusercontent.com/108419097/203384806-173f34b1-ed44-4239-8846-171cd4a5dc83.png">
+
+6. Ensemble adaboost classifier
+
+<img width="676" alt="Screen Shot 2022-11-22 at 12 45 54 PM" src="https://user-images.githubusercontent.com/108419097/203384886-706c96a2-3702-4ab6-940b-fb5efc04d27d.png">
+
+
+### Codes 
 1. Naive random oversampling
 
         # Resample the training data with the RandomOversampler
@@ -40,12 +67,24 @@ This exercise applies and compares six supervised machine learning models:
 
 4.  Cobmination (over and under) sampling
 
+        # Resample the training data with SMOTEENN
+        from imblearn.combine import SMOTEENN
+        smote_enn = SMOTEENN(random_state=0)
+        X_resampled, y_resampled = smote_enn.fit_resample(X, y)
+        Counter(y_resampled)
+
 5. Balanced random forest classifier
 
-      # Resample the training data with the BalancedRandomForestClassifier
-      from imblearn.ensemble import BalancedRandomForestClassifier
-      brfc_model = BalancedRandomForestClassifier(n_estimators=100, random_state=1)
-      brfc_model.fit(X_train, y_train)
-      
-5. 
+        # Resample the training data with the BalancedRandomForestClassifier
+        from imblearn.ensemble import BalancedRandomForestClassifier
+        brfc_model = BalancedRandomForestClassifier(n_estimators=100, random_state=1)
+        brfc_model.fit(X_train, y_train)
+
+6. Ensemble adaboost classifier
+
+        # Train the EasyEnsembleClassifier
+        from imblearn.ensemble import EasyEnsembleClassifier
+        eec_model = EasyEnsembleClassifier(n_estimators=100,random_state=1)
+        eec_model.fit(X_train, y_train)
+        
 ## Summary
