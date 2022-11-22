@@ -111,3 +111,5 @@ This exercise compares and contrasts six supervised machine learning models:
         eec_model.fit(X_train, y_train)
         
 ## Summary
+
+Out of the six models, Ensemble adaboost classidier has the highest accuracy score and recall values.  All models have similar precision scores (low performers for high-risk loans).  
