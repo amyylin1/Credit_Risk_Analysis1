@@ -17,48 +17,50 @@ This exercise compares and contrasts six supervised machine learning models:
 1. Naive random oversampling
 
 <img width="703" alt="Screen Shot 2022-11-22 at 12 38 51 PM" src="https://user-images.githubusercontent.com/108419097/203383519-3a0b9e55-a499-4440-ade5-9a3df6957740.png">
-- Balanced accurary:
-- Precision (high-/low-risk loans): 
-- Recall (high-/low-risk loans): 
+
+- Balanced accurary:  0.65
+- Precision (high-/low-risk loans):  0.01/1.00
+- Recall (high-/low-risk loans):  0.61/0.68
 
 2. SMOTE oversampling
 
 <img width="681" alt="Screen Shot 2022-11-22 at 12 39 36 PM" src="https://user-images.githubusercontent.com/108419097/203383667-15aa1c73-9cd3-4fb8-9af5-30a5913d2448.png">
-- Balanced accurary:
-- Precision (high-/low-risk loans): 
-- Recall (high-/low-risk loans): 
+
+- Balanced accurary:  0.62
+- Precision (high-/low-risk loans):  0.01/1.00
+- Recall (high-/low-risk loans):  0.61/0.64
 
 3. ClusterCentroids algorithm
 
 <img width="681" alt="Screen Shot 2022-11-22 at 12 43 53 PM" src="https://user-images.githubusercontent.com/108419097/203384540-1b82f351-9265-47b0-9c5f-d6fde74ef6af.png">
 
-- Balanced accurary:
-- Precision (high-/low-risk loans): 
-- Recall (high-/low-risk loans): 
+- Balanced accurary:  0.62
+- Precision (high-/low-risk loans):  0.01/1.00
+- Recall (high-/low-risk loans):  0.60/0.43
 
 4. SMOTEENN algorithm
 
 <img width="686" alt="Screen Shot 2022-11-22 at 12 44 49 PM" src="https://user-images.githubusercontent.com/108419097/203384707-42f6ee21-2482-42b0-ab57-59c3519f5b60.png">
 
-- Balanced accurary:
-- Precision (high-/low-risk loans): 
-- Recall (high-/low-risk loans): 
+- Balanced accurary:  0.51
+- Precision (high-/low-risk loans):  0.01/1.00
+- Recall (high-/low-risk loans):  0.70/0.58
 
 5. Balanced random forest classifier
 
 <img width="695" alt="Screen Shot 2022-11-22 at 12 45 24 PM" src="https://user-images.githubusercontent.com/108419097/203384806-173f34b1-ed44-4239-8846-171cd4a5dc83.png">
 
-- Balanced accurary:
-- Precision (high-/low-risk loans): 
-- Recall (high-/low-risk loans): 
+- Balanced accurary:  0.79
+- Precision (high-/low-risk loans):  0.04/1.00
+- Recall (high-/low-risk loans):  0.67/0.91
 
 6. Ensemble adaboost classifier
 
 <img width="676" alt="Screen Shot 2022-11-22 at 12 45 54 PM" src="https://user-images.githubusercontent.com/108419097/203384886-706c96a2-3702-4ab6-940b-fb5efc04d27d.png">
 
-- Balanced accurary:
-- Precision (high-/low-risk loans): 
-- Recall (high-/low-risk loans): 
+- Balanced accurary:  0.93
+- Precision (high-/low-risk loans):  0.07/1.00
+- Recall (high-/low-risk loans):  0.91/0.94
 
 ### Codes 
 1. Naive random oversampling
